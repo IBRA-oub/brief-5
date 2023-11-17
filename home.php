@@ -43,8 +43,7 @@
         <h1 class="text-8xl text-white font-black w-2/3 p-20">
             Bienvenu Sur E-bnaking
         </h1>
-        <p class=" text-black w-2/3 font-bold p-20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Quibusdam, deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, repellat.</p>
+
 
     </section>
 

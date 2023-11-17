@@ -48,7 +48,7 @@ if ($compte_id) {
                             class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">compte</a>
                     </li>
                     <li>
-                        <a href=""
+                        <a href="affichageTransaction.php"
                             class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">transaction</a>
                     </li>
                 </ul>
@@ -64,10 +64,16 @@ if ($compte_id) {
 
                 <tr>
                     <th scope="col" class="px-6 py-3">
-                        montant
+                        ID
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        type
+                        Montant
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Devise
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Type
                     </th>
 
 
@@ -82,10 +88,15 @@ if ($compte_id) {
                     class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         <?php 
-                            echo $trs['montant'];
+                            echo $trs['id'];
                         ?>
 
                     </th>
+                    <td class="px-6 py-4">
+                        <?php 
+                           echo $trs['montant'];
+                        ?>
+                    </td>
                     <td class="px-6 py-4">
                         <?php 
                             echo $trs['devis'];
