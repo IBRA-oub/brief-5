@@ -17,10 +17,10 @@ $clienttable="
 
     CREATE TABLE IF NOT EXISTS `client` (
         id int PRIMARY KEY AUTO_INCREMENT,
-        name varchar(50) NOT NULL,
+        nom varchar(50) NOT NULL,
         prenom varchar(50) NOT NULL,
         datenaissance DATE NOT NULL,
-        natinalite varchar(50) NOT NULL,
+        natoinalite varchar(50) NOT NULL,
         genre ENUM('homme', 'female') NOT NULL
     );
 ";
@@ -46,6 +46,7 @@ $transactionstable="
     CREATE TABLE IF NOT EXISTS `transactions` (
         id int PRIMARY KEY AUTO_INCREMENT,
         montant float(10) NOT NULL,
+        devis varchar(10) NOT NULL,
         type ENUM('credit', 'debit') NOT NULL,
         compte_id int NOT NULL,
         FOREIGN KEY (compte_id) REFERENCES `compte`(id)
@@ -53,11 +54,12 @@ $transactionstable="
 ";
 //$cnt->query($transactionstable);
  
-$inerclients="INSERT INTO client(name,prenom,datenaissance,natinalite, genre) 
+$inerclients="INSERT INTO client(nom,prenom,datenaissance,natoinalite, genre) 
 VALUE
-('NomClient1', 'PrenomClient1', '1990-01-01', 'NationaliteClient1', 'homme'),
+('oubourrih', 'brahim', '1990-01-01', 'NationaliteClient1', 'homme'),
 ('NomClient2', 'PrenomClient2', '1995-02-15', 'NationaliteClient2', 'female'),
 ('NomClient3', 'PrenomClient3', '1985-07-20', 'NationaliteClient3', 'homme'),
+('NomClient4', 'PrenomClient4', '1985-07-20', 'NationaliteClient4', 'homme'),
 ('NomClient4', 'PrenomClient4', '1985-07-20', 'NationaliteClient4', 'homme')
 
  ";
@@ -87,7 +89,7 @@ VALUE
   
  //$cnt->query($inercompte);
 
- $inertransaction="INSERT INTO transactions(montant,type,compte_id)
+ $inertransaction="INSERT INTO transactions(montant,devis,type,compte_id)
  VALUE
  (322300, 'credit', 25),
  (23400, 'debit', 25),

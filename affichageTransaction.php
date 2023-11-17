@@ -88,6 +88,11 @@ if ($compte_id) {
                     </th>
                     <td class="px-6 py-4">
                         <?php 
+                            echo $trs['devis'];
+                        ?>
+                    </td>
+                    <td class="px-6 py-4">
+                        <?php 
                             echo $trs['type'];
                         ?>
                     </td>
