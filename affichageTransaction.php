@@ -3,15 +3,18 @@ require ('index.php');
 
 $showtransaction=gettransaction();
 
+$compte_id = isset($_GET['compte_id']) ? $_GET['compte_id'] : null;
+
+if ($compte_id) {
+    $showtransaction = getTransactionsByCompteId($compte_id);
+} else {
+    $showtransaction = gettransaction();
+}
 
 
 
 
 ?>
-
-
-
-
 
 
 <!DOCTYPE html>

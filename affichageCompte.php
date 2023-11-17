@@ -3,7 +3,14 @@ require ('index.php');
 
 $showcompte=getcopmte();
 
+$client_id = isset($_GET['client_id']) ? $_GET['client_id'] : null;
 
+if ($client_id) {
+    $query = $cnt->query("SELECT * FROM compte WHERE client_id = $client_id");
+    $showcompte = $query->fetch_all(MYSQLI_ASSOC);
+} else {
+    $showcompte = getcopmte();
+}
 
 
 
@@ -73,7 +80,9 @@ $showcompte=getcopmte();
                         ?>
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                        <a href="affichageTransaction.php?compte_id=<?= $cmp['id']; ?>"
+                            class="font-medium text-blue-600 dark:text-blue-500 hover:underline">show
+                            transaction</a>
                     </td>
                 </tr>
 

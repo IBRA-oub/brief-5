@@ -4,15 +4,7 @@ require ('index.php');
 $showclient=getclients();
 
 
-
-
-
 ?>
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -89,7 +81,9 @@ $showclient=getclients();
                         ?>
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                        <a href="affichageCompte.php?client_id=<?= $clt['id']; ?>"
+                            class="font-medium text-blue-600 dark:text-blue-500 hover:underline">show compte
+                        </a>
                     </td>
                 </tr>
 

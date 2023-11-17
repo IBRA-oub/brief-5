@@ -57,7 +57,9 @@ $inerclients="INSERT INTO client(name,prenom,datenaissance,natinalite, genre)
 VALUE
 ('NomClient1', 'PrenomClient1', '1990-01-01', 'NationaliteClient1', 'homme'),
 ('NomClient2', 'PrenomClient2', '1995-02-15', 'NationaliteClient2', 'female'),
-('NomClient3', 'PrenomClient3', '1985-07-20', 'NationaliteClient3', 'homme')
+('NomClient3', 'PrenomClient3', '1985-07-20', 'NationaliteClient3', 'homme'),
+('NomClient4', 'PrenomClient4', '1985-07-20', 'NationaliteClient4', 'homme')
+
  ";
 
 //$cnt->query($inerclients);
@@ -65,9 +67,16 @@ VALUE
 $inercompte="INSERT INTO compte(rib,balance,devise,client_id) 
 VALUE
 ('87658765345678', 1000, 'Dinar', 10),
-('23456789098765', 1000, 'DH', 10),
-('45678987654344', 2000, 'Dinar', 11),
-('45678876544567', 3000, 'Dinar', 12)
+('23456789098765', 2300, 'DH', 10),
+('76543234567654', 5400, 'DH', 10),
+('09876543456765', 76500, 'dollar', 11),
+('32123456543456', 1880, 'DH', 11),
+('45678987654344', 97700, 'DH', 12),
+('45678876544567', 34400, 'euro', 12),
+('45678876544567', 65400, 'Dollar', 12),
+('45678876544567', 7600, 'DH', 12),
+('93655535399200', 76080, 'DH', 13)
+
  ";
 
 /*if ($cnt->query($inercompte) === TRUE) {
@@ -120,6 +129,15 @@ function getcopmte(){
     return $data_transaction;
  }
 
+ //fonction de filtre
+
+
+function getTransactionsByCompteId($compte_id)
+{
+    global $cnt;
+    $query = $cnt->query("SELECT * FROM transactions WHERE compte_id = $compte_id");
+    return $query->fetch_all(MYSQLI_ASSOC);
+}
 //$cnt->close();
 
 ?>
