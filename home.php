@@ -40,8 +40,8 @@
     <section class="h-screen w-auto bg-[url('image.jpg')] bg-cover">
 
 
-        <h1 class="text-8xl text-white font-black w-2/3 p-20">
-            Bienvenu Sur E-bnaking
+        <h1 class="text-8xl text-white font-black w-[80%] p-[150px]">
+            Bienvenu Sur E-Banking
         </h1>
 
 
