@@ -63,7 +63,7 @@ if ($client_id) {
 
     <div class="relative overflow-x-auto shadow-md ">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
 
 
                 <tr>
@@ -89,8 +89,7 @@ if ($client_id) {
                 <?php 
                 foreach ($showcompte as $cmp ) {
                 ?>
-                <tr
-                    class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <tr class=" even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         <?php 
                             echo $cmp['id'];
@@ -160,3 +159,78 @@ if ($client_id) {
 </body>
 
 </html>
+<!-- // // Check if the "Update" button is clicked
+// if (isset($_POST['submitupdate'])) {
+// // Get the user ID from the clicked row
+// echo "<script>
+window.alert('Erreur lors de la récupération des données utilisateur')
+</script>";
+// $user_id = $_POST['user_id'];
+
+// // Fetch the existing user data based on the user ID
+// $getUserQuery = "SELECT * FROM user WHERE id = $user_id";
+// $userResult = mysqli_query($cnx, $getUserQuery);
+
+// if ($userResult) {
+// $userData = mysqli_fetch_assoc($userResult);
+
+// // Pre-fill the form fields with existing data
+// echo "<script>
+//                 document.getElementById('username').value = '" . $userData['username'] . "';
+//                 document.getElementById('datenaissance').value = '" . $userData['date_de_naissance'] . "';
+//                 document.getElementById('nationalite').value = '" . $userData['nationalite'] . "';
+//                 document.getElementById('genre').value = '" . $userData['genre'] . "';
+//                 document.getElementById('codepostale').value = '" . $userData['code_postal'] . "';
+//                 document.getElementById('telephone').value = '" . $userData['tele'] . "';
+//                 document.getElementById('address').value = '" . $userData['adresse'] . "';
+//                 document.getElementById('email').value = '" . $userData['email'] . "';
+//                 document.getElementById('update_user_id').value = '" . $user_id . "';
+//             
+</script>";
+// } else {
+// echo "<script>
+window.alert('Erreur lors de la récupération des données utilisateur')
+</script>";
+// }
+// }
+// // Update user data in the database
+// if (isset($_POST['ajout_client'])) {
+// // Get the user ID from the hidden field
+// $update_user_id = $_POST['update_user_id'];
+
+// // Your existing code to get other form fields
+// $nom = $_POST['username'];
+// $datenaissance = $_POST['datenaissance'];
+// $nationalite = $_POST['nationalite'];
+// $genre = $_POST['genre'];
+// $password = $_POST['password'];
+// $email = $_POST['email'];
+// $address = $_POST['address'];
+// $codepostale = $_POST['codepostale'];
+// $telephone = $_POST['telephone'];
+
+// // Update the specified fields in the database
+// $updateQuery = "UPDATE user SET
+// username = '$nom',
+// date_de_naissance = '$datenaissance',
+// nationalite = '$nationalite',
+// genre = '$genre',
+// password = '$password',
+// email = '$email',
+// address = '$address',
+// code_postal = '$codepostale',
+// tele = '$telephone'
+// WHERE id = $update_user_id";
+
+// $updateResult = mysqli_query($cnx, $updateQuery);
+
+// if ($updateResult) {
+// echo "<script>
+window.alert('Mise à jour réussie')
+</script>";
+// } else {
+// echo "<script>
+window.alert('Erreur lors de la mise à jour : " . mysqli_error($cnx) . "')
+</script>";
+// }
+// } -->
